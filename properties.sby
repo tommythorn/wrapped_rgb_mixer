@@ -5,9 +5,14 @@ mode prove
 smtbmc
 
 [script]
-read -formal wrapper.v
+read -formal wrapper.v rgb_mixer.v encoder.v pwm.v debounce.v
+
 prep -top wrapper
 
 [files]
 wrapper.v
 properties.v
+rgb_mixer/src/rgb_mixer.v
+rgb_mixer/src/encoder.v
+rgb_mixer/src/pwm.v
+rgb_mixer/src/debounce.v
